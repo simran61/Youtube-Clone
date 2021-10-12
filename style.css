@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -8,10 +10,26 @@
     outline: none;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(87, 86, 86); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(189, 189, 189); 
+  }
+
 body{
     position: relative;
-    background: #f0f0f0;
-    font-family: 'roboto', sans-serif;
+    background: #f8f8f8;
+    font-family: 'Roboto', sans-serif;
 }
 
 .navbar{
@@ -51,38 +69,48 @@ body{
 }
 
 .logo{
-    height: 30px;
+    height: 25px;
+    /* margin: -10px 30px 0; */
     margin: -10px 30px 0;
 }
 
 .search-box{
     position: relative;
-    max-width: 500px;
+    max-width: 650px;
     width: 50%;
     height: 35px;
     display: flex;
+    margin-left: 105px;
+    cursor: pointer;
 }
 
 .search-bar{
-    width: 85%;
+    width: 100%;
     height: 100%;
-    border: 2px solid #dbdbdb;
-    padding: 0 20px;
+    border: 1.5px solid #dbdbdb;
+    padding: 17px 20px;
     font-size: 16px;
     text-transform: capitalize;
 }
 
 .search-btn{
-    width: 15%;
-    height: 100%;
-    background: #f0f0f0;
-    border: 2px solid #dbdbdb;
+    width: 10%;
+    height: 107%;
+    background: #f5f5f5;
+    border: 1.5px solid #dbdbdb;
     padding: 5px 0;
     border-left: none;
 }
 
 .search-btn img{
     height: 100%;
+}
+
+.search-mic{
+    margin-left: 20px;
+    background: #e6e6e6;
+    border-radius: 50%;
+    padding: 3px 4px 1px 4px;
 }
 
 .user-options{
@@ -118,17 +146,55 @@ body{
     position: fixed;
     top: 60px;
     left: 0;
-    min-width: 250px;
-    width: 250px;
+    min-width: 243px;
+    width: 243px;
     height: calc(100vh - 60px);
     background: #fff;
     padding-right: 10px;
+    overflow-y: scroll;
+    /* margin-top: 20px; */
+}
+.side-bar::-webkit-scrollbar {
+    width: 7px;
+    /* background: white; */
+  }
+
+  .side-bar::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .side-bar::-webkit-scrollbar-thumb:hover {
+    background: rgb(150, 149, 149); 
+  }
+
+.side-heading{
+    /* display: block;
+    width: 100%; */
+    padding: 7px 20px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* text-transform: capitalize; */
+    color: #5f5f5f;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.subs-icon{
+    /* background-color: black; */
+    width: 10px;
+    height: 10px;
+    /* right: 0; */
+    margin-left: auto;
+    /* margin-right: -30px; */
 }
 
 .links{
     display: block;
     width: 100%;
-    padding: 10px 20px;
+    padding: 7px 20px;
     display: flex;
     align-items: center;
     text-transform: capitalize;
@@ -158,10 +224,10 @@ body{
 
 .filters{
     position: fixed;
-    left: 250px;
+    left: 243px;
     top: 60px;
-    width: calc(100% - 250px);
-    height: 60px;
+    width: calc(100% - 243px);
+    height: 56px;
     background: #fff;
     border-top: 1px solid #dbdbdb;
     border-bottom: 1px solid #dbdbdb;
@@ -178,14 +244,14 @@ body{
 
 .filter-options{
     flex: 0 0 auto;
-    padding: 10px 20px;
+    padding: 7px 12px;
     border-radius: 50px;
     background: #f0f0f0;
     border: 1px solid #dbdbdb;
     text-transform: capitalize;
     margin-right: 10px;
     color: #242424;
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
 }
 
@@ -210,11 +276,14 @@ body{
 .video{
     min-height: 250px;
     height: auto;
+    cursor: pointer;
 }
 
 .thumbnail{
-    width: 100%;
-    height: 150px;
+    /* width: 100%;
+    height: 150px; */
+    width: 255px;
+    height: 125.8px;
     object-fit: cover;
 }
 
@@ -236,12 +305,15 @@ body{
 
 .title{
     width: 100%;
-    height: 40px;
+    height: 35px;
     overflow: hidden;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
-.channel-name{
+.channel-info{
     font-size: 14px;
     margin: 2px 0;
-    color: #979797;
+    color: #707070;
 }

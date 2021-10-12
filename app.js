@@ -41,8 +41,9 @@ const makeVideoCard = (data) => {
         <div class="content">
             <img src="${data.channelThumbnail}" class="channel-icon" alt="">
             <div class="info">
-                <h4 class="title">${data.snippet.title}</h4>
-                <p class="channel-name">${data.snippet.channelTitle}</p>
+                <p class="title">${data.snippet.title}</p>
+                <p class="channel-info">${data.snippet.channelTitle}</p>
+                <p class="channel-info">62.3K views • 3 hours ago</p>
             </div>
         </div>
     </div>
